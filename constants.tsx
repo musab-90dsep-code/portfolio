@@ -33,9 +33,9 @@ export const SKILLS: Skill[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'Nexus Dash',
+    title: 'Talimat Institute – Online Quran Academy',
     description: 'A modern Islamic educational platform designed to provide accessible Quranic and Islamic studies. Features a clean, responsive UI built with React and Tailwind CSS to ensure a seamless learning experience',
-    image: 'images/institute.png',
+    image: 'images/talimat.png',
     tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
     githubUrl: 'https://github.com/musab-90dsep-code/my-instutut',
     demoUrl: 'https://talimatinstitute.vercel.app/',

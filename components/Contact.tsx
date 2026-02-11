@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react'; // useRef যোগ করা হয়েছে
+import React, { useState, useRef } from 'react';
 import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
-import emailjs from '@emailjs/browser'; // EmailJS ইমপোর্ট করা হয়েছে
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
-  const formRef = useRef<HTMLFormElement>(null); // ফর্ম রেফারেন্স
+  const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -12,22 +12,20 @@ const Contact: React.FC = () => {
     setLoading(true);
 
     if (formRef.current) {
-      // --- EmailJS কানেকশন শুরু ---
       emailjs.sendForm(
-        'service_o5ovgyj',  // এখানে আপনার Service ID দিন
-        'template_rflbgtp',  // এখানে আপনার Template ID দিন
+        'service_o5ovgyj',
+        'template_rflbgtp',
         formRef.current,
-        'yAiuoBCnke8aeld2-'    // এখানে আপনার Public Key দিন
+        'yAiuoBCnke8aeld2-'
       )
       .then((result) => {
           setLoading(false);
           setSubmitted(true);
       }, (error) => {
           setLoading(false);
-          alert("দুঃখিত, মেসেজটি পাঠানো যায়নি। আবার চেষ্টা করুন।");
+          alert("দুঃখিত, মেসেজটি পাঠানো যায়নি। আবার চেষ্টা করুন।");
           console.error(error.text);
       });
-      // --- EmailJS কানেকশন শেষ ---
     }
   };
 
@@ -39,22 +37,49 @@ const Contact: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
               Let's <span className="text-gradient">Connect</span> and Create Something Great
             </h2>
-            {/* আপনার যোগাযোগের তথ্যগুলো এখানে থাকবে... */}
+            <p className="text-xl text-slate-400 mb-12">
+              Have a project in mind or just want to say hi? My inbox is always open. 
+              I'm looking for new opportunities and collaborations.
+            </p>
+            
             <div className="space-y-8">
-               <div className="flex items-center gap-6 group">
-                 <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                   <Mail size={24} />
-                 </div>
-                 <div>
-                   <div className="text-sm text-slate-500 mb-1">Email Me</div>
-                   <div className="text-lg font-bold text-white">musabbinsharif321@gmail.com</div>
-                 </div>
-               </div>
-               {/* Phone ও MapPin সেকশন আগের মতোই থাকবে */}
+              {/* Email Item */}
+              <div className="flex items-center gap-6 group">
+                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-500 mb-1">Email Me</div>
+                  <div className="text-lg font-bold text-white">musabbinsharif321@gmail.com</div>
+                </div>
+              </div>
+
+              {/* Phone Item - পুনরায় যোগ করা হয়েছে */}
+              <div className="flex items-center gap-6 group">
+                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-500 mb-1">Call Me</div>
+                  <div className="text-lg font-bold text-white">01670555719</div>
+                </div>
+              </div>
+
+              {/* Location Item - পুনরায় যোগ করা হয়েছে */}
+              <div className="flex items-center gap-6 group">
+                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-500 mb-1">Find Me</div>
+                  <div className="text-lg font-bold text-white">Dhaka, Bangladesh</div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="relative">
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10"></div>
             <div className="glass p-10 md:p-14 rounded-[3rem] border-white/10 shadow-2xl relative overflow-hidden">
               {submitted ? (
                 <div className="text-center py-20 animate-fade-in">
@@ -73,7 +98,7 @@ const Contact: React.FC = () => {
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-400">Your Name</label>
                       <input 
-                        name="from_name" // Template-এর সাথে মিল রাখতে হবে
+                        name="from_name"
                         type="text" required
                         className="w-full bg-slate-900/50 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-all"
                         placeholder="John Doe"
@@ -82,7 +107,7 @@ const Contact: React.FC = () => {
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-400">Your Email</label>
                       <input 
-                        name="reply_to" // Template-এর সাথে মিল রাখতে হবে
+                        name="reply_to"
                         type="email" required
                         className="w-full bg-slate-900/50 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-all"
                         placeholder="john@example.com"
@@ -109,7 +134,7 @@ const Contact: React.FC = () => {
                   </div>
                   <button 
                     disabled={loading}
-                    className="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-black text-lg hover:shadow-2xl transition-all flex items-center justify-center gap-3 disabled:opacity-70"
+                    className="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-black text-lg hover:shadow-2xl transition-all flex items-center justify-center gap-3 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <><Loader2 className="animate-spin" /> Processing...</>
