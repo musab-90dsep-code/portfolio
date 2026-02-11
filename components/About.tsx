@@ -20,14 +20,10 @@ const About: React.FC = () => {
               <span className="text-gradient">Impactful Solutions</span>
             </h2>
             <p className="text-lg text-slate-400 leading-relaxed">
-              “A passionate frontend developer focused on building modern, responsive web applications.”. 
-              My journey is fueled by a deep-seated curiosity about technology and a commitment to creating 
-              systems that are as elegant as they are efficient.
+              “I am a passionate Full-Stack Web Developer focused on building modern, responsive, and scalable web applications. My journey in technology is driven by curiosity and a commitment to writing clean, maintainable code..
             </p>
             <p className="text-lg text-slate-400 leading-relaxed">
-              From building complex data-driven applications to crafting pixel-perfect user interfaces, 
-              I focus on scalability and maintainability. My goal is to bridge the gap between human needs 
-              and technical possibilities.
+              From crafting intuitive frontend interfaces with React to designing secure backend systems using Django and PostgreSQL, I focus on performance, scalability, and real-world usability. My goal is to bridge the gap between business needs and technical solutions.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
@@ -42,11 +38,11 @@ const About: React.FC = () => {
           </div>
 
           <div className="relative">
-            <div className="glass p-2 rounded-[2.5rem] overflow-hidden rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl">
+            <div className="w-full glass p-2 rounded-[2.5rem] overflow-hidden hover:rotate-0 transition-transform duration-500 shadow-2xl">
                <img 
-                 src="images/image.jpg" 
+                 src="images/my-image.png" 
                  alt="Workspace" 
-                 className="w-full h-auto rounded-[2rem] shadow-inner opacity-80"
+                 className="w-full rounded-[2rem] shadow-inner opacity-80"
                />
             </div>
             {/* Decorative element */}

@@ -3,6 +3,8 @@ import React from 'react';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { PROJECTS } from '../constants';
 
+
+
 const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-32">
@@ -14,10 +16,12 @@ const Projects: React.FC = () => {
             </h2>
             <p className="text-slate-400">Selected work that highlights my skills in architecture and design.</p>
           </div>
-          <a href="#" className="flex items-center gap-2 text-primary font-bold hover:text-white transition-colors group">
+           <a href="#" className="flex items-center gap-2 text-primary font-bold hover:text-white transition-colors group">
             View All Work
             <ArrowUpRight size={20} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-          </a>
+           </a>
+
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

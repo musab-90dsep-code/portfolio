@@ -1,10 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
+import { Github,Linkedin, Twitter, ArrowRight, Instagram } from 'lucide-react';
+
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
-  const words = ['Frontend Engineer', 'UI/UX Enthusiast', 'Problem Solver', 'React Developer'];
+  const words = ['Full Stack Developer',
+  'Problem Solver',
+  'Python & Django Expert',
+  'PostgreSQL Database Architect',
+  'React & Next.js Specialist',
+  'Frontend Engineer'];
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -64,9 +70,22 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="mt-12 flex items-center gap-8 justify-center lg:justify-start">
-            <a href="#" className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Github size={24} /></a>
-            <a href="#" className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Linkedin size={24} /></a>
-            <a href="#" className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Twitter size={24} /></a>
+            <a href="https://github.com/musab-90dsep-code"
+            target="_blank"
+            rel="noopener noreferrer"
+             className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Github size={24} /></a>
+            <a href="https://www.linkedin.com/in/musab-bin-sharif-0931aa373" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Linkedin size={24} /></a>
+            <a href="https://x.com/MUSABBINSH57074" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Twitter size={24} /></a>
+            <a href="https://www.instagram.com/musab_90dsep" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Instagram size={24} /></a>
           </div>
         </div>
 
@@ -77,7 +96,7 @@ const Hero: React.FC = () => {
               <img 
                 src="images\image.jpg" 
                 alt="Musab Khan" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                className="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700 hover:scale-105"
               />
             </div>
             {/* Floating Badges */}
