@@ -8,7 +8,13 @@ import {
   Layers, 
   Layout, 
   Smartphone, 
-  Zap 
+  Zap,
+  FileCode,
+  Server,
+  Palette,
+  Code,
+  Move,
+  GitMerge
 } from 'lucide-react';
 import { Project, Skill, NavLink } from './types';
 
@@ -63,13 +69,13 @@ export const PROJECTS: Project[] = [
 export const SkillIcon = ({ name, className }: { name: string, className?: string }) => {
   switch (name.toLowerCase()) {
     case 'react': return <Zap className={className} />;
-    case 'typescript': return <Code2 className={className} />;
-    case 'node': return <Cpu className={className} />;
-    case 'tailwind': return <Layout className={className} />;
-    case 'database': return <Database className={className} />;
-    case 'python': return <Layers className={className} />;
-    case 'framer': return <Globe className={className} />;
-    case 'git': return <Smartphone className={className} />;
+    case 'typescript': return <FileCode className={className} />;
+    case 'node.js': return <Server className={className} />;
+    case 'tailwind css': return <Palette className={className} />;
+    case 'postgresql': return <Database className={className} />;
+    case 'python': return <Code className={className} />;
+    case 'framer motion': return <Move className={className} />;
+    case 'git': return <GitMerge className={className} />;
     default: return <Code2 className={className} />;
   }
 };

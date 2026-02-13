@@ -1,12 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './Home';
+import AllProjects from './components/AllProjects';
 
 const App: React.FC = () => {
   return (
@@ -21,11 +19,10 @@ const App: React.FC = () => {
       <Navbar />
       
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<AllProjects />} />
+        </Routes>
       </main>
 
       <Footer />

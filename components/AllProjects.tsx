@@ -1,32 +1,62 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { PROJECTS } from '../constants';
+import { Link } from 'react-router-dom';
 
+const AllProjects: React.FC = () => {
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
+  const allTags = Array.from(new Set(PROJECTS.flatMap((p) => p.tags)));
 
-const Projects: React.FC = () => {
+  const filteredProjects = selectedTag
+    ? PROJECTS.filter((p) => p.tags.includes(selectedTag))
+    : PROJECTS;
+
   return (
-    <section id="projects" className="py-32">
+    <section id="all-projects" className="py-32">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Featured <span className="text-gradient">Creations</span>
+              All <span className="text-gradient">Creations</span>
             </h2>
-            <p className="text-slate-400">Selected work that highlights my skills in architecture and design.</p>
+            <p className="text-slate-400">Here are all of my projects.</p>
           </div>
-           <Link to="/projects" className="flex items-center gap-2 text-primary font-bold hover:text-white transition-colors group">
-            View All Work
+          <Link to="/" className="flex items-center gap-2 text-primary font-bold hover:text-white transition-colors group">
+            Back to Home
             <ArrowUpRight size={20} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-           </Link>
+          </Link>
+        </div>
 
-
+        <div className="flex flex-wrap gap-4 mb-8">
+          <button
+            onClick={() => setSelectedTag(null)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              !selectedTag
+                ? 'bg-primary text-white'
+                : 'bg-white/10 text-slate-300 hover:bg-primary/50'
+            }`}
+          >
+            All
+          </button>
+          {allTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setSelectedTag(tag)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedTag === tag
+                  ? 'bg-primary text-white'
+                  : 'bg-white/10 text-slate-300 hover:bg-primary/50'
+              }`}
+            >
+              {tag}
+            </button>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {PROJECTS.map((project) => (
+          {filteredProjects.map((project) => (
             <div key={project.id} className="group relative glass rounded-[2.5rem] overflow-hidden hover:border-primary/50 transition-all duration-500">
               <div className="relative h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center gap-6">
@@ -72,4 +102,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default AllProjects;
