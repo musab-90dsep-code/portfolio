@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
              className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Github size={24} /></a>
-            <a href="https://www.linkedin.com/in/musab-bin-sharif-0931aa373" 
+            <a href="https://www.linkedin.com/in/musabkhan321" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-500 hover:text-white transition-all transform hover:scale-125"><Linkedin size={24} /></a>
