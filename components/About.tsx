@@ -74,7 +74,7 @@ const About: React.FC = () => {
                 <motion.div 
                   key={i} 
                   variants={statItem}
-                  whileHover={{ y: -5, borderColor: "rgba(139, 92, 246, 0.5)" }} // হোভার ইফেক্ট
+                  whileHover={{ y: -5, borderColor: "rgba(16, 185, 129, 0.5)" }} // হোভার ইফেক্ট
                   className="glass p-6 rounded-2xl transition-colors group cursor-default"
                 >
                   <div className="text-primary mb-3 group-hover:scale-110 transition-transform origin-left">
