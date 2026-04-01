@@ -76,9 +76,9 @@ const Hero: React.FC = () => {
         >
           <motion.div 
             variants={fadeInUp}
-            className="inline-flex items-center px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20 shadow-[0_0_15px_rgba(139,92,246,0.3)]"
+            className="inline-flex items-center px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20 shadow-[0_0_15px_rgba(16,185,129,0.3)]"
           >
-            <span className="w-2 h-2 bg-primary rounded-full mr-2 shadow-[0_0_5px_#8b5cf6]"></span>
+            <span className="w-2 h-2 bg-primary rounded-full mr-2 shadow-[0_0_5px_#10b981]"></span>
             Available for new opportunities
           </motion.div>
 
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
             
             <motion.a 
               href="#contact" 
-              whileHover={{ scale: 1.05, borderColor: "rgba(139,92,246,0.5)" }}
+              whileHover={{ scale: 1.05, borderColor: "rgba(16,185,129,0.5)" }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full glass text-white font-semibold hover:bg-white/10 transition-all"
             >

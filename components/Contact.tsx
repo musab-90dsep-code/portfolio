@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
             <div className="space-y-8">
               {/* Email Item */}
               <motion.div variants={fadeUp} whileHover={{ x: 10 }} className="flex items-center gap-6 group cursor-default">
-                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-[0_0_15px_rgba(16,185,129,0.1)]">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
 
               {/* Phone Item */}
               <motion.div variants={fadeUp} whileHover={{ x: 10 }} className="flex items-center gap-6 group cursor-default">
-                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-[0_0_15px_rgba(16,185,129,0.1)]">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
 
               {/* Location Item */}
               <motion.div variants={fadeUp} whileHover={{ x: 10 }} className="flex items-center gap-6 group cursor-default">
-                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-[0_0_15px_rgba(16,185,129,0.1)]">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
             <div className="glass p-10 md:p-14 rounded-[3rem] border-white/10 shadow-2xl relative overflow-hidden">
               
               <AnimatePresence mode="wait">
@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={loading}
-                      className="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-black text-lg hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-black text-lg hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       {loading ? (
                         <><Loader2 className="animate-spin" /> Processing...</>
