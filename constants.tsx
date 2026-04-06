@@ -39,7 +39,26 @@ export const SKILLS: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: 1,
+    id: 1, 
+    title: 'ERP Manager Business Suite (PWA)',
+    description: 'A comprehensive full-stack ERP solution for streamlined business operations, featuring real-time inventory tracking, automated invoicing, and financial management.',
+    image: '/images/erp.png', 
+    tags: ['NextJs', 'TypeScript', 'Tailwind CSS', 'Django'],
+    githubUrl: '#', 
+    demoUrl: 'https://erp-zeta-green.vercel.app/',
+},
+ 
+  {
+    id: 2,
+    title: 'Kowmi Madrasa ',
+    description: 'A modern introductory website for a Qawmi Madrasa, showcasing their academic programs, and institutional details with a clean, responsive design.',
+    image: '/images/madrasa.png',
+    tags: ['TypeScript', 'React', 'Tailwind CSS', 'Django', 'PostgreSQL', 'Cloudinary'],
+    githubUrl: '#',
+    demoUrl: 'https://www.markazulfikri.shop/',
+  },
+   {
+    id: 3,
     title: 'Online Academy',
     description: 'A modern Islamic educational platform designed to provide accessible Quranic and Islamic studies.',
     image: '/images/talimat.png',
@@ -47,18 +66,9 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/musab-90dsep-code/my-instutut',
     demoUrl: 'https://talimatinstitute.vercel.app/',
   },
-  {
-    id: 2,
-    title: 'Ethereal Shop',
-    description: 'A modern introductory website for a Qawmi Madrasa, showcasing their academic programs, and institutional details with a clean, responsive design.',
-    image: '/images/madrasa.png',
-    tags: ['TypeScript', 'React', 'Tailwind CSS', 'Django', 'PostgreSQL', 'Cloudinary'],
-    githubUrl: '#',
-    demoUrl: 'https://www.markazulfikri.shop/',
-  },
   
     {
-  id: 3,
+  id: 4,
   title: 'Personal Portfolio',
   description: 'A high-fidelity developer portfolio designed to merge cutting-edge technology with high-performance design.',
   image: '/images/project.png',
